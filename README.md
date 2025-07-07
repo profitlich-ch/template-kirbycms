@@ -1,0 +1,2 @@
+# Schriften
+Für alle Inhalte ist eine Standard definiert unter `src/scss/project/body`: Schriftgrösse, Zeilenabstand und Fette. Die im Design verwendeten Kombinationen und Schriftgrösse und Zeilenabstand sind in der `src/scss/proejct/variables` definiert. Das Designsystem funktioniert nicht mit einem Variablennamen, der für alle Layoutgrössen gleich ist, stattdessen ist – sofern es eine Abweichung vom Standard gibt – im Snippet in der media query eine Variable benannt.

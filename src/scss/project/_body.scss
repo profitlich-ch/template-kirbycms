@@ -1,0 +1,8 @@
+@use "./forward" as *;
+@use "sass:map";
+
+body {
+    font-family: "SuisseIntl";
+    @include dtm-base;
+    font-weight: 300;
+}
