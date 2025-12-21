@@ -1,3 +1,7 @@
+    <?= vite()->css('src/App.scss') ?>
+    <?php if (option('debug')): ?>
+        <?= vite()->js('src/Dev.ts') ?>
+    <?php endif ?>
     <script>
         // FOUC
         let domReady = (cb) => {
@@ -14,6 +18,8 @@
             document.body.setAttribute('data-preloading', 'false');
         }, 500);
     </script>
+    </div>
+    </main>
 </body>
 
 </html>
