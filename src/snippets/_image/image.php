@@ -15,6 +15,7 @@
 $image = $image ?? null;
 $ratio = $ratio ?? null;
 $class = $class ?? '';
+$objectPosition = $objectPosition ?? 'center center';
 $sizes = $sizes ?? [300, 800, 1024, 2048]; // Standard-Größen für die Bildgenerierung
 
 // Überprüfen, ob ein gültiges Kirby File-Objekt übergeben wurde
@@ -37,9 +38,9 @@ $aspectRatio = 1;       // Standard-Aspektverhältnis, falls nicht berechenbar
 $originalMimeType = $image->mime();
 
 // Prüfe, ob ein Crop-Verhältnis übergeben wurde
-if ($ratio && preg_match('/^(\d+):(\d+)$/', $ratio, $matches)) {
-    $cropWidth  = (int)$matches[1];
-    $cropHeight = (int)$matches[2];
+if ($ratio && preg_match('/^([\d.]+):(\d+)$/', $ratio, $matches)) {
+    $cropWidth  = (float)$matches[1];
+    $cropHeight = (float)$matches[2];
     $aspectRatio = $cropWidth / $cropHeight; // Berechne das Seitenverhältnis
 
     // Generiere Thumbnails für jede definierte Größe
@@ -95,6 +96,7 @@ if ($ratio && preg_match('/^(\d+):(\d+)$/', $ratio, $matches)) {
         width: 100%;
         height: auto; /* Stellt sicher, dass die Höhe proportional angepasst wird */
         display: block; /* Entfernt zusätzlichen Platz unter dem Bild */
+        object-position: <?= esc($objectPosition) ?>
     }
 </style>
 
@@ -122,5 +124,6 @@ if ($ratio && preg_match('/^(\d+):(\d+)$/', $ratio, $matches)) {
         srcset="<?= implode(', ', $fallbackSrcset) ?>"
         class="<?= esc($class) ?>"
         alt="<?= esc($image->alt()->or($image->filename())) ?>"
-        loading="lazy" />
+        loading="lazy"
+    >
 </picture>

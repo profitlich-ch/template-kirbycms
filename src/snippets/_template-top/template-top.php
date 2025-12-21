@@ -9,14 +9,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!-- prevent automatic conversion of numbers to telephone links -->
     <meta name="format-detection" content="telephone=no" />
-
-    <?= css('site/assets/css/style.css') ?>
-    <?= vite()->js('src/App.ts') ?>
-    <?php if (option('debug')): ?>
-        <?= vite()->css('site/assets/css/dev.css') ?>
-        <?= vite()->js('src/Dev.ts') ?>
-    <?php endif ?>
-
+    
     <style>
         /* FOUC
         https://www.primative.net/blog/how-to-get-rid-of-the-flash-of-unstyled-content/ */
@@ -36,7 +29,7 @@
     </style>
 </head>
 
-<body>
+<body class="body body--<?php echo $page->slug(); ?> no-js" data-preloading="true">
     <!-- Firefox hack against FOUC: https://www.primative.net/blog/how-to-get-rid-of-the-flash-of-unstyled-content/ -->
     <script>
         0
@@ -52,4 +45,4 @@
         $ersetzen = array('<li>', '</li>');
         $string = $page->haupttext();
         echo str_replace($suchen, $ersetzen, $string);
-    ?>daf
+    ?>
