@@ -1,0 +1,7 @@
+$layouts: ("smartphone": 420, "tablet": 800, "desktop": 2000, "big": 2500);
+$units: ("smartphone": px, "tablet": vw, "desktop": vw, "big": vw);
+$breakpoints: ("smartphone": 0, "tablet": 600, "desktop": 1400, "big": 2500);
+$colors: ("background": #ffffff, "black": #000000, "gray": #f0f0f0);
+$margins: ("smartphone": ("top": 0, "right": 20, "bottom": 0, "left": 20), "tablet": ("top": 0, "right": 20, "bottom": 0, "left": 20), "desktop": ("top": 0, "right": 0, "bottom": 0, "left": 105), "big": ("top": 0, "right": 20, "bottom": 0, "left": 20));
+$columns: ("smartphone": 4, "tablet": 7, "desktop": 12, "big": 14);
+$gutter: ("smartphone": 12, "tablet": 20, "desktop": 20, "big": 20);
