@@ -1,4 +1,3 @@
-import 'lazysizes';
 import { Toolbar } from './dev/toolbar/Toolbar.ts';
 
 class Dev {

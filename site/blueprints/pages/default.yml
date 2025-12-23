@@ -1,0 +1,12 @@
+title: Default
+
+fields:
+  text:
+    type: writer
+    label: Contact Address
+    marks:
+      - link
+    headings:
+      - 3
+    nodes:
+      - heading

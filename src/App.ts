@@ -1,4 +1,3 @@
-import 'lazysizes';
 import { MediaQueries } from './utils/MediaQueries.ts';
 import { BodyScrolled } from './utils/BodyScrolled.ts';
 
