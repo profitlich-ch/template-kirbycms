@@ -1,0 +1,26 @@
+@use "../../scss/forward" as *;
+@use "sass:map";
+
+.TEMPLATE {
+}
+
+@include mediaquery(smartphone) {
+    $layout: smartphone;
+
+    .TEMPLATE {
+    }
+}
+
+@include mediaquery(tablet) {
+    $layout: tablet;
+
+    .TEMPLATE {
+    }
+}
+
+@include mediaquery(desktop) {   
+    $layout: desktop;
+
+    .TEMPLATE {
+    }
+}
