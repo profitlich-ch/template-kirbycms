@@ -1,5 +1,5 @@
 {
-    "name": "puralpin.ch",
+    "name": "domain.tld",
     "private": true,
     "version": "0.0.0",
     "type": "module",
@@ -31,7 +31,6 @@
     },
     "dependencies": {
         "debounce": "^2.2.0",
-        "js-cookie": "^3.0.5",
         "pathe": "^2.0.3",
         "profitlich-template-toolkit": "^0.5.0",
         "vite-plugin-kirby": "^5.6.1"

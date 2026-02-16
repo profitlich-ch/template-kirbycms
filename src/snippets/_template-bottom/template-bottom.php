@@ -1,6 +1,6 @@
-    <?= vite()->css('src/App.scss') ?>
+    <?= vite()->js('src/App.js') ?>
     <?php if (option('debug')): ?>
-        <?= vite()->js('src/Dev.ts') ?>
+        <?= vite()->js('src/Dev.js') ?>
     <?php endif ?>
     <script>
         // FOUC
