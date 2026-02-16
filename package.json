@@ -1,39 +1,38 @@
 {
-    "name": "puralpin.ch",
+    "name": "domain.tld",
     "private": true,
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-        "dev": "vite",
-        "build": "tsc && vite build",
-        "preview": "vite preview"
+        "copy": "node scripts/copy-files.js build",
+        "watch:copy": "node scripts/copy-files.js dev",
+        "dev:vite": "vite",
+        "dev": "npm-run-all --parallel watch:copy dev:vite",
+        "build": "npm run copy && vite build",
+        "preview": "vite preview",
+        "deploy:staging": "node scripts/deploy.js staging",
+        "deploy:production": "node scripts/deploy.js production",
+        "release:staging": "npm run build && npm run deploy:staging",
+        "release:production": "npm run build && npm run deploy:production"
     },
     "devDependencies": {
         "@spiriit/vite-plugin-svg-spritemap": "^5.0.0",
         "archiver": "^7.0.1",
-        "browserslist": "^4.26.3",
-        "chokidar": "^4.0.3",
-        "cli-progress": "^3.12.0",
         "del": "^8.0.1",
-        "dotenv": "^17.2.3",
         "easing-progress": "^1.0.2",
-        "fs-extra": "^11.3.2",
-        "glob": "^11.0.3",
         "npm-run-all": "^4.1.5",
         "postcss-input-range": "^6.0.0",
         "postcss-lightningcss": "^1.0.2",
         "sass": "^1.93.2",
-        "ssh2-sftp-client": "^12.0.1",
         "svgo": "^4.0.0",
         "terser": "^5.44.0",
         "vite": "^7.1.9",
         "vite-plugin-manifest-sri": "^0.2.0"
     },
     "dependencies": {
-        "cookie": "^1.0.2",
-        "dotenv": "^17.0.1",
-        "js-cookie": "^3.0.5",
+        "debounce": "^2.2.0",
         "pathe": "^2.0.3",
+        "profitlich-template-toolkit": "^0.5.0",
         "vite-plugin-kirby": "^5.6.1"
     }
 }
