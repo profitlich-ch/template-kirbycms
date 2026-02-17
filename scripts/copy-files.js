@@ -10,7 +10,7 @@ const copyTasks = [
     {
         name: 'snippetsAssets',
         src: ['src/snippets/**/*.+(svg|jpg|jpeg|gif|png|html)', '!src/snippets/**/_*.*'],
-        dest: 'assets/snippets',
+        dest: 'public/assets/snippets',
         base: 'src/snippets'
     },
 ];

@@ -2,33 +2,33 @@ import { run } from 'profitlich-template-toolkit/scripts/deploy';
 
 const uploadTasks = [
     {
-        name: 'Root Files (.htaccess)',
-        localPattern: '.htaccess',
-        localBase: '.',
-        remoteDir: '/'
+        name: 'Public (index.php, .htaccess)',
+        localPattern: 'public/**/*',
+        localBase: 'public',
+        remoteDir: '/public',
+        ignore: [
+            'public/dist/**',
+            'public/assets/**',
+            'public/media/**',
+        ]
     },
     {
         name: 'Site (Templates, Snippets, Blueprints, Config, Plugins, Models)',
         localPattern: 'site/**/*',
-        ignore: [
-            'site/cache/**',
-            'site/sessions/**',
-            'site/accounts/**'
-        ],
         localBase: 'site',
         remoteDir: '/site'
     },
     {
         name: 'Assets (Build)',
-        localPattern: 'dist/**/*',
-        localBase: 'dist',
-        remoteDir: '/dist'
+        localPattern: 'public/dist/**/*',
+        localBase: 'public/dist',
+        remoteDir: '/public/dist'
     },
     {
         name: 'Static Assets',
-        localPattern: 'assets/**/*',
-        localBase: 'assets',
-        remoteDir: '/assets'
+        localPattern: 'public/assets/**/*',
+        localBase: 'public/assets',
+        remoteDir: '/public/assets'
     }
 ];
 

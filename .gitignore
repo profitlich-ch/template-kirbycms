@@ -80,7 +80,7 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+/public/dist
 
 # Gatsby files
 .cache/
@@ -129,8 +129,8 @@ Icon
 # Temporary files
 # ---------------
 
-/media/*
-!/media/index.html
+/public/media/*
+!/public/media/index.html
 
 # Lock files
 # ---------------
@@ -151,20 +151,20 @@ Icon
 # Cache Files
 # ---------------
 
-/site/cache/*
-!/site/cache/index.html
+/storage/cache/*
+!/storage/cache/index.html
 
 # Accounts
 # ---------------
 
-/site/accounts/*
-!/site/accounts/index.html
+/storage/accounts/*
+!/storage/accounts/index.html
 
 # Sessions
 # ---------------
 
-/site/sessions/*
-!/site/sessions/index.html
+/storage/sessions/*
+!/storage/sessions/index.html
 
 # License
 # ---------------

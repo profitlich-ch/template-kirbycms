@@ -14,10 +14,11 @@ export default defineConfig(({ command, mode }) => {
 
     return {
         root: '.',
+        publicDir: false,
         base: command === 'serve' ? '/' : '/dist/',
 
         build: {
-            outDir: 'dist',
+            outDir: 'public/dist',
             assetsDir: '',
             sourcemap: mode === 'development',
             // empty the out dir before writing new files
