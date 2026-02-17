@@ -1,0 +1,1 @@
+<?= vite()->js('/src/snippets/TEMPLATE/template.js') ?>
