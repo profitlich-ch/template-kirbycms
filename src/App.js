@@ -3,6 +3,7 @@ import { MediaQueries } from 'profitlich-template-toolkit/utils/MediaQueries';
 import { Vh100 } from 'profitlich-template-toolkit/utils/Vh100';
 import { BodyScrolled } from 'profitlich-template-toolkit/utils/BodyScrolled';
 import { MenuToggle } from 'profitlich-template-toolkit/components/menu-toggle/MenuToggle';
+import './scss/app.scss';
 
 class App {
     mediaQuery;
