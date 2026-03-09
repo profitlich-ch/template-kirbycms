@@ -1,1 +1,1 @@
-import './_template.scss';
+import './template.scss';
