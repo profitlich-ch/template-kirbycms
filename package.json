@@ -30,7 +30,7 @@
         "vite-plugin-manifest-sri": "^0.2.0"
     },
     "dependencies": {
-        "@profitlich/template-toolkit": "^1.0.2",
+        "@profitlich/template-toolkit": "^2.5.0",
         "debounce": "^2.2.0",
         "pathe": "^2.0.3",
         "vite-plugin-kirby": "^5.6.1"
