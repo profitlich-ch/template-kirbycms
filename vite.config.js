@@ -17,6 +17,15 @@ export default defineConfig(({ command, mode }) => {
         root: '.',
         publicDir: false,
         base: command === 'serve' ? '/' : '/dist/',
+        // Wird zur Bauzeit durch ein Literal ersetzt. Aus `if (__DEBUG__)` wird
+        // damit `if (false)`, und der Minifier entfernt den Zweig — Debug-Code
+        // bleibt im Quelltext, erreicht die Produktion aber nicht.
+        //
+        // An `mode` gehängt, nicht an `import.meta.env.DEV`: Letzteres wäre auf
+        // Staging bereits false und würde den Debug-Code dort verschlucken.
+        define: {
+            __DEBUG__: mode !== 'production',
+        },
 
         build: {
             outDir: 'public/dist',
