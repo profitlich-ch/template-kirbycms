@@ -11,32 +11,19 @@
     <meta name="format-detection" content="telephone=no" />
     
     <style>
-        /* FOUC
-        https://www.primative.net/blog/how-to-get-rid-of-the-flash-of-unstyled-content/ */
-        .no-js {
-            visibility: visible;
-        }
-
-        /* prevent CSS transitions until page is loaded */
+        /* Keine Transitions, solange die Seite lädt. Den Body bis DOMContentLoaded
+           zu verstecken, wäre gegen FOUC unnötig – das CSS blockiert im <head> ohnehin –,
+           liesse FCP und LCP aber auf alle Modul-Skripte warten. */
         body[data-preloading="true"] * {
             transition: transform 0s !important;
-        }
-
-        /* hide body until full html is loaded */
-        body {
-            visibility: hidden;
         }
     </style>
 </head>
 
-<body class="body body--<?php echo $page->slug(); ?> no-js" data-preloading="true">
+<body class="body body--<?php echo $page->slug(); ?>" data-preloading="true">
     <!-- Firefox hack against FOUC: https://www.primative.net/blog/how-to-get-rid-of-the-flash-of-unstyled-content/ -->
     <script>
         0
-    </script>
-    <!-- FOUC -->
-    <script>
-        document.querySelector('body').classList.remove('no-js');
     </script>
 
     <!-- Bugfix Kirby: p Tags in li löschen -->
