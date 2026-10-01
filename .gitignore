@@ -208,3 +208,6 @@ Icon
 /site/assets/css
 /site/assets/js
 /site/snippets
+
+# Messergebnisse von scripts/pagespeed.js
+.pagespeed/
